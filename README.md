@@ -5,7 +5,7 @@
 
 ## 1. 기간 & 참여 인원
 - 2023년 4월 23일 ~ 5월 13일
-- 6인 
+- 이소희, 신경훈, 안은정, 정은서, 윤아람, 김준구 총 6인 
 
 </br>
 
@@ -15,8 +15,8 @@
   - Matplotlib
   - Seaborn
   - Sklearn
-  - LinearRegression
-  - 
+  - Linear Regression
+  - Random Forest
 
 </br>
 
@@ -34,19 +34,18 @@
 ### 4.2. 컬럼명 바꾸기
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
 
-- **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
+- **URL 정규식 체크** :pushpin: 
+- (https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
   - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
  
 
-### 4.3. 브랜드명 출출
+### 4.3. 브랜드명 추출
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
 
 - **요청 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
   - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
 
-- **결과 응답** :pushpin: [코드 확인]()
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
 
 ### 4.4. Mileage, Engine, Power 단위 
 - 단위 통합 후 단위 제거, 숫자형으로 바꾸기
