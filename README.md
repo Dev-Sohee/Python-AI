@@ -105,7 +105,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 ### 4.7. Heatmap
 - 모든 변수 포함
 
-<img src="https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png" alt="heatmap1" width="80%" height="80%">
+<img src="https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png" alt="heatmap1">
 
 
 
@@ -146,7 +146,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 ### 5.3. Decision Tree Regressor
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png" alt="decision tree" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png" alt="decision tree" width="40%" height="40%">
 
 
 
@@ -154,7 +154,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 ### 5.2. MLP Regressor
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png" alt="MLP regressor" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png" alt="MLP regressor" width="40%" height="40%">
 
 
 
