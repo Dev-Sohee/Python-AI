@@ -35,16 +35,13 @@
 
 
 ### 4.1. 데이터 살펴보기
-
+<img width="883" alt="data" src="https://user-images.githubusercontent.com/120240261/236746713-df23f1b3-63f0-4158-b9e8-da0cdc5653f5.png">
 
 
 ### 4.2. 컬럼명 바꾸기
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
-
-- **URL 정규식 체크** :pushpin: 
-- (https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
-  - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
- 
+'''python
+df_data.columns = ['Brand', 'Location', 'Year', 'Driven', 'Fuel', 'Trans', 'Owner', 'Mileage', 'Engine', 'Power', 'Seats', 'Price']
+'''
 
 ### 4.3. 브랜드명 추출
 
@@ -58,8 +55,8 @@
 
 
 ### 4.5. 이상값 및 결측값 제거
-
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
+![driven1](https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png)
+![driven2](https://user-images.githubusercontent.com/120240261/236746749-6e5bd933-75f9-45e1-b712-952944f84fb1.png)
 
   
 
@@ -67,7 +64,12 @@
 
 
 ### 4.7. Heatmap
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
+- 모든 변수 포함
+![heatmap1](https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png)
+
+
+- 주요 변수 포함
+![heatmap2](https://user-images.githubusercontent.com/120240261/236746756-6ceb91cc-ea50-473b-9f84-79d766c3d748.png)
 
 
 </div>
@@ -79,16 +81,23 @@
 
 
 ### 5.1. Linear Regression
-Result
+![linear regression](https://user-images.githubusercontent.com/120240261/236746757-7cda6471-e2aa-455f-b07a-0da901b078ea.png)
+
 
 
 ### 5.2. Random Forest
+![random forest](https://user-images.githubusercontent.com/120240261/236746762-b1719d64-0f9d-43f7-a7bf-95873be5d98d.png)
+
 
 
 ### 5.3. Decision Tree Regressor
+![decision tree](https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png)
+
 
 
 ### 5.2. MLP Regressor
+![MLP regressor](https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png)
+
 
 </br>
 
