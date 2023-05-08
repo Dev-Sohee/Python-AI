@@ -26,7 +26,7 @@
 - Kaggle에서 주최한 "인도 중고차 예측하기" 데이터셋의 train data를 바탕으로 중고차 가격 예측하기
 
 
-- **6019** rows and **14** columns 
+- ***6019*** rows and ***14*** columns 
 
 
 </br>
@@ -35,27 +35,7 @@
 
 
 ### 4.1. 데이터 살펴보기
-'''python
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 6019 entries, 0 to 6018
-Data columns (total 14 columns):
- #   Column             Non-Null Count  Dtype  
----  ------             --------------  -----  
- 0   Unnamed: 0         6019 non-null   int64  
- 1   Name               6019 non-null   object 
- 2   Location           6019 non-null   object 
- 3   Year               6019 non-null   int64  
- 4   Kilometers_Driven  6019 non-null   int64  
- 5   Fuel_Type          6019 non-null   object 
- 6   Transmission       6019 non-null   object 
- 7   Owner_Type         6019 non-null   object 
- 8   Mileage            6017 non-null   object 
- 9   Engine             5983 non-null   object 
- 10  Power              5983 non-null   object 
- 11  Seats              5977 non-null   float64
- 12  New_Price          824 non-null    object 
- 13  Price              6019 non-null   float64
- '''
+
 
 
 ### 4.2. 컬럼명 바꾸기
@@ -96,6 +76,8 @@ Data columns (total 14 columns):
 </br>
 
 ## 5. Machine Learning
+
+
 ### 5.1. Linear Regression
 Result
 
