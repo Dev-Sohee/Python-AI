@@ -21,15 +21,21 @@
 
 ## 3. Introduction
 - Data:  https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
+
+
 - Kaggle에서 주최한 "인도 중고차 예측하기" 데이터셋의 train data를 바탕으로 중고차 가격 예측하기
+
+
 - **6019** rows and **14** columns 
 
 
+</br>
 
 ## 4. Data Processing
 
 
 ### 4.1. 데이터 살펴보기
+'''python
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 6019 entries, 0 to 6018
 Data columns (total 14 columns):
@@ -49,6 +55,7 @@ Data columns (total 14 columns):
  11  Seats              5977 non-null   float64
  12  New_Price          824 non-null    object 
  13  Price              6019 non-null   float64
+ '''
 
 
 ### 4.2. 컬럼명 바꾸기
@@ -101,12 +108,11 @@ Result
 
 ### 5.2. MLP Regressor
 
+</br>
+
 
 ## 6. Conclusion
 - 제일 적합했던 모델:
-- 이상치 데이터 제거 안하고 선형회귀 분석했을 때: Train data Accuracy < 0 
-- 이상치 제거 후 : Train data Accuracy = 0.78
 
 
-**데이터 전처리의 중요성**
 
