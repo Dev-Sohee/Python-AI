@@ -86,6 +86,7 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 ### 4.5. 이상값 및 결측값 제거
 
 
+<img src="https://user-images.githubusercontent.com/120240261/236746713-df23f1b3-63f0-4158-b9e8-da0cdc5653f5.png" width="30%" alt="data" height="30%">
 ![driven1](https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png)
 ![driven2](https://user-images.githubusercontent.com/120240261/236748667-dd681ab3-b2a7-4bec-b220-15405c8b6212.png)
 
