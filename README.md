@@ -35,27 +35,60 @@
 
 
 ### 4.1. 데이터 살펴보기
+
+
 <img width="883" alt="data" src="https://user-images.githubusercontent.com/120240261/236746713-df23f1b3-63f0-4158-b9e8-da0cdc5653f5.png">
 
 
+
+
 ### 4.2. 컬럼명 바꾸기
-'''python
+```python
 df_data.columns = ['Brand', 'Location', 'Year', 'Driven', 'Fuel', 'Trans', 'Owner', 'Mileage', 'Engine', 'Power', 'Seats', 'Price']
-'''
+```
+
+
 
 ### 4.3. 브랜드명 추출
-
+```python
+df_data['Brand'] = df_data.Brand.str.split(' ').str[0]
+```
 
 
 
 ### 4.4. Mileage, Engine, Power 단위 
-- 단위 통합 후 단위 제거, 숫자형으로 바꾸기
+- 단위 제거
 
+```python
+df_data['Mileage'] = df_data.Mileage.str.split(' ').str[0]
+df_data['Engine'] = df_data.Engine.str.split(' ').str[0]
+df_data['Power'] = df_data.Power.str.split(' ').str[0]
+```
   
+  
+
+- 숫자형 변환
+```python
+df_data['Mileage'] = pd.to_numeric(df_data['Mileage'])
+```
+
+
+
+- Fuel_Type = 'CNG', 'LPG' -> Mileage 단위 km/kg
+- Fuel_Type = 'Diesel', 'Petrol' -> Mileage 단위 kmpl
+- 'CNG', 'LPG'에 각각 1.64, 1.3을 곱해서 kmpl로 단위 통합
+```pyhton
+df_data['Mileage'][df_data['Fuel'] == 'CNG'] = df_data[df_data['Fuel'] == 'CNG']['Mileage']*1.64
+df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']['Mileage']*1.3
+```
 
 
 ### 4.5. 이상값 및 결측값 제거
+
+
 ![driven1](https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png)
+
+
 ![driven2](https://user-images.githubusercontent.com/120240261/236746749-6e5bd933-75f9-45e1-b712-952944f84fb1.png)
 
   
@@ -65,10 +98,19 @@ df_data.columns = ['Brand', 'Location', 'Year', 'Driven', 'Fuel', 'Trans', 'Owne
 
 ### 4.7. Heatmap
 - 모든 변수 포함
+
+
 ![heatmap1](https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png)
 
 
+
+
+
+
+
 - 주요 변수 포함
+
+
 ![heatmap2](https://user-images.githubusercontent.com/120240261/236746756-6ceb91cc-ea50-473b-9f84-79d766c3d748.png)
 
 
@@ -81,21 +123,28 @@ df_data.columns = ['Brand', 'Location', 'Year', 'Driven', 'Fuel', 'Trans', 'Owne
 
 
 ### 5.1. Linear Regression
+
+
 ![linear regression](https://user-images.githubusercontent.com/120240261/236746757-7cda6471-e2aa-455f-b07a-0da901b078ea.png)
 
 
 
 ### 5.2. Random Forest
+
+
 ![random forest](https://user-images.githubusercontent.com/120240261/236746762-b1719d64-0f9d-43f7-a7bf-95873be5d98d.png)
 
 
 
 ### 5.3. Decision Tree Regressor
+
+
 ![decision tree](https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png)
 
 
 
 ### 5.2. MLP Regressor
+
 ![MLP regressor](https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png)
 
 
