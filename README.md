@@ -85,10 +85,6 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 
 ### 4.5. 이상값 및 결측값 제거
 
-- 결측값값 제거
-```python
-df_data = df_data.dropna()
-```
 
 
 - ['Driven'] 컬럼에 이상값 한 개
@@ -99,6 +95,12 @@ df_data = df_data.dropna()
 <img src="https://user-images.githubusercontent.com/120240261/236748667-dd681ab3-b2a7-4bec-b220-15405c8b6212.png" width="40%" alt="driven2" height="40%">
 
 
+- 결측값 제거
+```python
+df_data = df_data.dropna()
+```
+
+
   
 
 ### 4.6. One-Hot Encoding
@@ -106,6 +108,7 @@ df_data = df_data.dropna()
 ```python
 df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans', 'Owner'])
 ```
+
 
 
 ### 4.7. Heatmap
