@@ -20,7 +20,12 @@
 </br>
 
 ## 3. Introduction
-Data > https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
+Data  https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
+Kaggle에서 주최한 "인도 중고차 예측하기" 데이터셋의 train data를 바탕으로 중고차 가격 예측하기
+![image](https://user-images.githubusercontent.com/120240261/236743947-e7af6c9c-d169-464f-8156-0c4b82fff41e.png)
+6019 rows and 14 columns 
+![image](https://user-images.githubusercontent.com/120240261/236743978-b0a65e27-b90e-4044-bdc2-02f36e704615.png)
+
 
 
 ## 4. Data Processing
