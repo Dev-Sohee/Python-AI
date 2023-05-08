@@ -89,7 +89,7 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 ![driven1](https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png)
 
 
-![driven2](https://user-images.githubusercontent.com/120240261/236746749-6e5bd933-75f9-45e1-b712-952944f84fb1.png)
+![driven2](https://user-images.githubusercontent.com/120240261/236748667-dd681ab3-b2a7-4bec-b220-15405c8b6212.png)
 
   
 
