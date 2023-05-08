@@ -86,19 +86,22 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 ### 4.5. 이상값 및 결측값 제거
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png" width="40%" alt="driven1" height="40%">
-<img src="https://user-images.githubusercontent.com/120240261/236748667-dd681ab3-b2a7-4bec-b220-15405c8b6212.png" width="40%" alt="driven2" height="40%">
+<img src="https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png" width="40%" alt="driven1" height="40%">  <img src="https://user-images.githubusercontent.com/120240261/236748667-dd681ab3-b2a7-4bec-b220-15405c8b6212.png" width="40%" alt="driven2" height="40%">
 
 
   
 
 ### 4.6. One-Hot Encoding
 
+```python
+df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans', 'Owner'])
+```
+
 
 ### 4.7. Heatmap
 - 모든 변수 포함
 
-<img src="https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png" alt="heatmap1" width="30%" height="30%">
+<img src="https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png" alt="heatmap1" width="60%" height="60%">
 
 
 
@@ -108,7 +111,7 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 
 - 주요 변수 포함
 
-<img src="https://user-images.githubusercontent.com/120240261/236746756-6ceb91cc-ea50-473b-9f84-79d766c3d748.png" alt="heatmap2" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/120240261/236746756-6ceb91cc-ea50-473b-9f84-79d766c3d748.png" alt="heatmap2" width="50%" height="50%">
 
 
 
@@ -124,14 +127,14 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 ### 5.1. Linear Regression
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746757-7cda6471-e2aa-455f-b07a-0da901b078ea.png" alt="linear regression" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/120240261/236746757-7cda6471-e2aa-455f-b07a-0da901b078ea.png" alt="linear regression" width="60%" height="60%">
 
 
 
 ### 5.2. Random Forest
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746762-b1719d64-0f9d-43f7-a7bf-95873be5d98d.png" alt="random forest" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/120240261/236746762-b1719d64-0f9d-43f7-a7bf-95873be5d98d.png" alt="random forest" width="60%" height="60%">
 
 
 
@@ -139,7 +142,7 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 ### 5.3. Decision Tree Regressor
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png" alt="decision tree" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png" alt="decision tree" width="60%" height="60%">
 
 
 
@@ -147,7 +150,7 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 ### 5.2. MLP Regressor
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png" alt="MLP regressor" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png" alt="MLP regressor" width="60%" height="60%">
 
 
 
