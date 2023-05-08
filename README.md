@@ -20,20 +20,36 @@
 </br>
 
 ## 3. Introduction
-Data  https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
-Kaggle에서 주최한 "인도 중고차 예측하기" 데이터셋의 train data를 바탕으로 중고차 가격 예측하기
-![image](https://user-images.githubusercontent.com/120240261/236743947-e7af6c9c-d169-464f-8156-0c4b82fff41e.png)
-6019 rows and 14 columns 
-![image](https://user-images.githubusercontent.com/120240261/236743978-b0a65e27-b90e-4044-bdc2-02f36e704615.png)
+- Data:  https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
+- Kaggle에서 주최한 "인도 중고차 예측하기" 데이터셋의 train data를 바탕으로 중고차 가격 예측하기
+- **6019** rows and **14** columns 
 
 
 
 ## 4. Data Processing
-데이터 전처리 과정
 
 
 ### 4.1. 데이터 살펴보기
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 6019 entries, 0 to 6018
+Data columns (total 14 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Unnamed: 0         6019 non-null   int64  
+ 1   Name               6019 non-null   object 
+ 2   Location           6019 non-null   object 
+ 3   Year               6019 non-null   int64  
+ 4   Kilometers_Driven  6019 non-null   int64  
+ 5   Fuel_Type          6019 non-null   object 
+ 6   Transmission       6019 non-null   object 
+ 7   Owner_Type         6019 non-null   object 
+ 8   Mileage            6017 non-null   object 
+ 9   Engine             5983 non-null   object 
+ 10  Power              5983 non-null   object 
+ 11  Seats              5977 non-null   float64
+ 12  New_Price          824 non-null    object 
+ 13  Price              6019 non-null   float64
+
 
 ### 4.2. 컬럼명 바꾸기
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
@@ -76,7 +92,9 @@ Kaggle에서 주최한 "인도 중고차 예측하기" 데이터셋의 train dat
 ### 5.1. Linear Regression
 Result
 
+
 ### 5.2. Random Forest
+
 
 ### 5.3. Decision Tree Regressor
 
@@ -85,4 +103,10 @@ Result
 
 
 ## 6. Conclusion
+- 제일 적합했던 모델:
+- 이상치 데이터 제거 안하고 선형회귀 분석했을 때: Train data Accuracy < 0 
+- 이상치 제거 후 : Train data Accuracy = 0.78
+
+
+**데이터 전처리의 중요성**
 
