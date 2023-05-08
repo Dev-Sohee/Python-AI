@@ -1,5 +1,4 @@
 # :pushpin: 중고차 가격 예측하기
-> https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
 
 </br>
 
@@ -21,7 +20,8 @@
 </br>
 
 ## 3. Introduction
-
+Data
+> https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
 
 
 ## 4. Data Processing
@@ -41,18 +41,12 @@
 
 ### 4.3. 브랜드명 추출
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
 
-- **요청 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
-  - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
 
 
 ### 4.4. Mileage, Engine, Power 단위 
 - 단위 통합 후 단위 제거, 숫자형으로 바꾸기
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
-
-- **Http 프로토콜 추가 및 trim()** :pushpin: [코드 확인]()
   
 
 
@@ -60,9 +54,14 @@
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
 
-- **컨텐츠 저장** :pushpin: [코드 확인]()
-  - URL 유효성 체크와 이미지, 제목 파싱이 끝난 컨텐츠는 DB에 저장합니다.
-  - 저장된 컨텐츠는 다시 Repository - Service - Controller를 거쳐 화면단에 송출됩니다.
+  
+
+### 4.6. One-Hot Encoding
+
+
+### 4.7. Heatmap
+![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
+
 
 </div>
 </details>
@@ -75,6 +74,10 @@ Result
 
 ### 5.2. Random Forest
 
+### 5.3. Decision Tree Regressor
+
+
+### 5.2. MLP Regressor
 
 
 ## 6. Conclusion
