@@ -122,7 +122,10 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 
 
 
+
 - ['Driven'] 컬럼에 이상값 한 개
+
+
 
 
 <img src="https://user-images.githubusercontent.com/120240261/236746743-ca32f490-93e2-4dd0-b5b4-92aeb68708d7.png" width="40%" alt="driven1" height="40%">  
@@ -130,10 +133,17 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 
 
 
+
+
+
 - 이상값 제거 후
 
 
+
+
 <img src="https://user-images.githubusercontent.com/120240261/236748667-dd681ab3-b2a7-4bec-b220-15405c8b6212.png" width="40%" alt="driven2" height="40%">
+
+
 
 
 
@@ -149,14 +159,21 @@ df_data = df_data.dropna()
 
 
   
+  
+  
+  
 
 
 ### 4.6. One-Hot Encoding
 
 
+
+
 ```python
 df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans', 'Owner'])
 ```
+
+
 
 
 
@@ -169,7 +186,11 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 - 모든 변수 포함
 
 
+
+
 <img src="https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png" alt="heatmap1">
+
+
 
 
 
@@ -182,7 +203,11 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 - 주요 변수 포함
 
 
+
+
 <img src="https://user-images.githubusercontent.com/120240261/236746756-6ceb91cc-ea50-473b-9f84-79d766c3d748.png" alt="heatmap2" width="60%" height="60%">
+
+
 
 
 
@@ -248,9 +273,9 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 |     |LR|LR log|RF|RF log|DT|MLP|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|accuracy|0.7830|0.9253|0.9820|0.9912|**<span style="color:red">0.9999</span>**|0.5556|
-|r2 score|0.7790|0.8596|**<span style="color:red">0.9265</span>**|0.8923|0.7712|0.5300|
-|rmse|5.1974|17.1682|**<span style="color:red">2.9959</span>**|3.6290|5.2883|7.5809|
+|accuracy|0.7830|0.9253|0.9820|0.9912|***0.9999***|0.5556|
+|r2 score|0.7790|0.8596|***0.9265***|0.8923|0.7712|0.5300|
+|rmse|5.1974|17.1682|***2.9959***|3.6290|5.2883|7.5809|
 
 
 
