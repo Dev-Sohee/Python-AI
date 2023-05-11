@@ -248,9 +248,9 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 |     |LR|LR log|RF|RF log|DT|MLP|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|accuracy|0.7830|0.9253|0.9820|0.9912|<span style="color:red">**0.9999**</span>|0.5556|
-|r2 score|0.7790|0.8596|<span style="color:red">**0.9265**</span>|0.8923|0.7712|0.5300|
-|rmse|5.1974|17.1682|<span style="color:red">**2.9959**</span>|3.6290|5.2883|7.5809|
+|accuracy|0.7830|0.9253|0.9820|0.9912|**<span style="color:red">0.9999</span>**|0.5556|
+|r2 score|0.7790|0.8596|**<span style="color:red">0.9265</span>**|0.8923|0.7712|0.5300|
+|rmse|5.1974|17.1682|**<span style="color:red">2.9959</span>**|3.6290|5.2883|7.5809|
 
 
 
