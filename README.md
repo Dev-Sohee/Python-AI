@@ -3,12 +3,15 @@
 </br>
 
 ## 1. 기간 & 참여 인원
+
 - 2023년 4월 23일 ~ 5월 13일
 - 이소희, 신경훈, 안은정, 정은서, 윤아람, 김준구 총 6인 
+
 
 </br>
 
 ## 2. 사용 기술
+
   - Pandas
   - Numpy
   - Matplotlib
@@ -17,9 +20,11 @@
   - Linear Regression
   - Random Forest
 
+
 </br>
 
 ## 3. Introduction
+
 - Data:  https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
 
 
@@ -32,6 +37,7 @@
 </br>
 
 ## 4. Data Processing
+
 
 
 ### 4.1. 데이터 살펴보기
@@ -49,6 +55,7 @@ df_data.columns = ['Brand', 'Location', 'Year', 'Driven', 'Fuel', 'Trans', 'Owne
 
 
 
+
 ### 4.3. 브랜드명 추출
 ```python
 df_data['Brand'] = df_data.Brand.str.split(' ').str[0]
@@ -56,7 +63,10 @@ df_data['Brand'] = df_data.Brand.str.split(' ').str[0]
 
 
 
+
 ### 4.4. Mileage, Engine, Power 단위 
+
+
 - 단위 제거
 
 ```python
@@ -64,6 +74,7 @@ df_data['Mileage'] = df_data.Mileage.str.split(' ').str[0]
 df_data['Engine'] = df_data.Engine.str.split(' ').str[0]
 df_data['Power'] = df_data.Power.str.split(' ').str[0]
 ```
+  
   
   
 
@@ -74,6 +85,7 @@ df_data['Mileage'] = pd.to_numeric(df_data['Mileage'])
 
 
 
+
 - Fuel_Type = 'CNG', 'LPG' -> Mileage 단위 km/kg
 - Fuel_Type = 'Diesel', 'Petrol' -> Mileage 단위 kmpl
 - 'CNG', 'LPG'에 각각 1.64, 1.3을 곱해서 kmpl로 단위 통합
@@ -81,6 +93,8 @@ df_data['Mileage'] = pd.to_numeric(df_data['Mileage'])
 df_data['Mileage'][df_data['Fuel'] == 'CNG'] = df_data[df_data['Fuel'] == 'CNG']['Mileage']*1.64
 df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']['Mileage']*1.3
 ```
+
+
 
 
 ### 4.5. 이상값 및 결측값 제거
@@ -103,6 +117,7 @@ df_data = df_data.dropna()
 
   
 
+
 ### 4.6. One-Hot Encoding
 
 ```python
@@ -111,7 +126,10 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 
 
+
 ### 4.7. Heatmap
+
+
 - 모든 변수 포함
 
 <img src="https://user-images.githubusercontent.com/120240261/236746753-0c98b960-9a87-443f-aa6d-c94eaf2c6ecd.png" alt="heatmap1">
@@ -129,6 +147,8 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 
 
+
+
 </div>
 </details>
 
@@ -141,6 +161,8 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 
 <img src="https://user-images.githubusercontent.com/120240261/236746757-7cda6471-e2aa-455f-b07a-0da901b078ea.png" alt="linear regression" width="70%" height="70%">
+
+
 
 
 
@@ -172,6 +194,13 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 
 ## 6. Conclusion
+
+|     |LR|LR log|RF|RF log|DT|MLP|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|accuracy|0.7830|0.9253|0.9820|0.9912|**0.9999**|0.5556|
+|r2 score|0.7790|0.8596|**0.9265**|0.8923|0.7712|0.5300|
+|rmse|5.1974|17.1682|**2.9959**|3.6290|5.2883|7.5809|
+
 - 제일 적합했던 모델:
 
 
