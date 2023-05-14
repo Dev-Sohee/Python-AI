@@ -157,14 +157,14 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 ### 5.1. Linear Regression
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746757-7cda6471-e2aa-455f-b07a-0da901b078ea.png" alt="linear regression" width="70%" height="70%">
+<img src="https://github.com/sohee4/portfolio/assets/120240261/b3e399f4-89a6-4a81-a74b-f458fc6ecc07" alt="linear regression" width="70%" height="70%">
 </br>
 
 
 ### 5.2. Random Forest Regressor
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746762-b1719d64-0f9d-43f7-a7bf-95873be5d98d.png" alt="random forest" width="70%" height="70%">
+<img src="https://github.com/sohee4/portfolio/assets/120240261/db072474-6c42-461f-9689-eb53f18a4465" alt="random forest" width="70%" height="70%">
 </br>
 
 
