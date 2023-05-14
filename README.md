@@ -175,10 +175,22 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 </br>
 
 
-### 5.2. MLP Regressor
+### 5.4. MLP Regressor
 
 
 <img src="https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png" alt="MLP regressor" width="40%" height="40%">
+</br>
+
+
+### 5.5. Statsmodels
+
+
+```
+import statsmodels.api as sm
+X_train2 = sm.add_constant(X_train)
+model2 = sm.OLS(y_train, X_train2).fit()
+model2.summary()
+```
 </br>
 
 
