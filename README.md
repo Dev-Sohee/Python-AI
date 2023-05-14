@@ -161,7 +161,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 </br>
 
 
-### 5.2. Random Forest
+### 5.2. Random Forest Regressor
 
 
 <img src="https://user-images.githubusercontent.com/120240261/236746762-b1719d64-0f9d-43f7-a7bf-95873be5d98d.png" alt="random forest" width="70%" height="70%">
@@ -194,7 +194,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 
 
 
-- 제일 적합했던 모델:
+- 제일 적합했던 모델: Random Forest Regressor
 
 
 
