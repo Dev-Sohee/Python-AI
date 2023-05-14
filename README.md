@@ -171,7 +171,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 ### 5.3. Decision Tree Regressor
 
 
-<img src="https://user-images.githubusercontent.com/120240261/236746764-980b3eb5-f981-43e6-8648-942a12894a2b.png" alt="decision tree" width="40%" height="40%">
+<img src="https://github.com/sohee4/portfolio/assets/120240261/172d2f80-8712-4e68-a7df-86aa3ebfb5ce" alt="decision tree" width="40%" height="40%">
 </br>
 
 
