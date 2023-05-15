@@ -231,7 +231,7 @@ model2.summary()
 
 
 
--Results of v2
+- Results of v2
 
 
 | v2  |LR|LR log|RF|RF log|DT|MLP|
