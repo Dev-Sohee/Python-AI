@@ -171,7 +171,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 - 'Engine'의 VIF Factor = 11
  
  
-- 'Engine' 컬럼 포함 version: v1 / 'Engine' 컬럼 미포함 version: v2
+- 'Engine' 컬럼 포함 version: v1 / 미포함 version: v2
  
  
 </br>
@@ -219,7 +219,7 @@ model2.summary()
 
 ## 6. Conclusion
 
-- Results of v1
+Results of v1
 | v1  |LR|LR log|RF|RF log|DT|MLP|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |accuracy|0.7830|0.9253|0.9820|0.9912|***0.9999***|0.5556|
@@ -229,7 +229,7 @@ model2.summary()
 
 
 
-- Results of v2
+Results of v2
 | v2  |LR|LR log|RF|RF log|DT|MLP|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |accuracy|0.7799|0.9249|0.9816|0.9912|***0.9999***|0.6257|
