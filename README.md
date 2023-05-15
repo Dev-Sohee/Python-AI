@@ -154,6 +154,29 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 ## 5. Machine Learning
 
 
+
+
+### 다중공선성 판단
+
+
+- 회귀 분석에서 하나의 feature(예측 변수)가 다른 feature와의 상관 관계가 높으면, 회귀 분석 시 부정적인 영향을 미칠 수 있기 때문에, 모델링 하기 전에 먼저 다중 공선성의 존재 여부를 확인 필요
+
+
+- 보통 다중 공선성을 판단할 때 VIF(Variance Inflation Factors)값 이용
+
+
+- 일반적으로, VIF > 10인 feature들은 다른 변수와의 상관관계가 높아, 다중 공선성이 존재하는 것으로 판단
+
+
+- 'Engine'의 VIF Factor = 11
+ 
+ 
+- 'Engine' 컬럼 포함 version: v1 / 'Engine' 컬럼 미포함 version: v2
+ 
+ 
+</br>
+
+
 ### 5.1. Linear Regression
 
 
@@ -196,14 +219,29 @@ model2.summary()
 
 ## 6. Conclusion
 
-
-|     |LR|LR log|RF|RF log|DT|MLP|
+- Results of v1
+| v1  |LR|LR log|RF|RF log|DT|MLP|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |accuracy|0.7830|0.9253|0.9820|0.9912|***0.9999***|0.5556|
 |r2 score|0.7790|0.8596|***0.9265***|0.8923|0.7712|0.5300|
 |rmse|5.1974|17.1682|***2.9959***|3.6290|5.2883|7.5809|
 
 
+
+
+- Results of v2
+| v2  |LR|LR log|RF|RF log|DT|MLP|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|accuracy|0.7799|0.9249|0.9816|0.9912|***0.9999***|0.6257|
+|r2 score|0.7771|0.8551|***0.9235***|0.8945|0.7385|0.6286|
+|rmse|5.2202|4.2086|***3.0584***|3.5909|5.5638|6.7390|
+
+
+
+- 'Engine'컬럼을 제거한 후 머신러닝 모델에 대입한 결과가 오히려 미세하게 안좋게 나옴
+
+
+- v1과 v2에서 각각 가장 좋은 모델은 변하지 
 
 
 - 제일 적합했던 모델: Random Forest Regressor
