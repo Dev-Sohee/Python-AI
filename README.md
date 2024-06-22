@@ -12,8 +12,9 @@
 
 ## 2. 사용 기술
 
-  - Pandas
-  - Numpy
+  - Pyhon 3.10
+  - Pandas 1.5.3
+  - Numpy 1.22.4
   - Matplotlib
   - Seaborn
   - Sklearn
