@@ -1,8 +1,16 @@
 # :pushpin: 중고차 가격 예측하기
 
+
 </br>
 
-## 1. 기간 & 참여 인원
+## 1. 목적
+- 유/무의미한 정보가 섞여있는 빅데이터에서 유의미한 정보를 추출하여 정확한 중고차 가격을 예측하는 AI 알고리즘 구현
+- AI 알고리즘별로 예측 모델의 정확도를 시각화하여 어떤 알고리즘을 사용했을 때 가장 정확한 예측 값이 나오는지 판단
+  
+
+</br>
+
+## 2. 기간 & 참여 인원
 
 - 2023년 4월 23일 ~ 5월 13일
 - 이소희, 신경훈, 안은정, 정은서, 윤아람, 김준구 총 6인 
@@ -10,7 +18,7 @@
 
 </br>
 
-## 2. 사용 기술
+## 3. 사용 기술
 
   - Pyhon 3.10
   - Pandas 1.5.3
@@ -22,7 +30,7 @@
   - Random Forest
 </br>
 
-## 3. Introduction
+## 4. Introduction
 
 - Data:  https://www.kaggle.com/datasets/avikasliwal/used-cars-price-prediction
 
@@ -35,11 +43,11 @@
 
 </br>
 
-## 4. Data Processing
+## 5. Data Processing
 
 
 
-### 4.1. 데이터 살펴보기
+### 5.1. 데이터 살펴보기
 
 
 
@@ -47,7 +55,7 @@
 </br>
 
 
-### 4.2. 컬럼명 바꾸기
+### 5.2. 컬럼명 바꾸기
 
 
 ```python
@@ -56,7 +64,7 @@ df_data.columns = ['Brand', 'Location', 'Year', 'Driven', 'Fuel', 'Trans', 'Owne
 </br>
 
 
-### 4.3. 브랜드명 추출
+### 5.3. 브랜드명 추출
 
 
 ```python
@@ -65,7 +73,7 @@ df_data['Brand'] = df_data.Brand.str.split(' ').str[0]
 </br>
 
 
-### 4.4. Mileage, Engine, Power 단위 
+### 5.4. Mileage, Engine, Power 단위 
 
 
 - 단위 제거
@@ -100,7 +108,7 @@ df_data['Mileage'][df_data['Fuel'] == 'LPG'] = df_data[df_data['Fuel'] == 'LPG']
 </br>
 
 
-### 4.5. 이상값 및 결측값 제거
+### 5.5. 이상값 및 결측값 제거
 
 
 - ['Driven'] 컬럼에 이상값 한 개
@@ -126,7 +134,7 @@ df_data = df_data.dropna()
 </br>  
   
 
-### 4.6. One-Hot Encoding
+### 5.6. One-Hot Encoding
 
 
 ```python
@@ -135,7 +143,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 </br>
 
 
-### 4.7. Heatmap
+### 5.7. Heatmap
 
 
 - 모든 변수 포함
@@ -152,7 +160,7 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 </br>
 
 
-## 5. Machine Learning
+## 6. Machine Learning
 
 
 
@@ -178,35 +186,35 @@ df_data = pd.get_dummies(df_data, columns = ['Brand', 'Location', 'Fuel', 'Trans
 </br>
 
 
-### 5.1. Linear Regression
+### 6.1. Linear Regression
 
 
 <img src="https://github.com/sohee4/portfolio/assets/120240261/b3e399f4-89a6-4a81-a74b-f458fc6ecc07" alt="linear regression" width="70%" height="70%">
 </br>
 
 
-### 5.2. Random Forest Regressor
+### 6.2. Random Forest Regressor
 
 
 <img src="https://github.com/sohee4/portfolio/assets/120240261/db072474-6c42-461f-9689-eb53f18a4465" alt="random forest" width="70%" height="70%">
 </br>
 
 
-### 5.3. Decision Tree Regressor
+### 6.3. Decision Tree Regressor
 
 
 <img src="https://github.com/sohee4/portfolio/assets/120240261/172d2f80-8712-4e68-a7df-86aa3ebfb5ce" alt="decision tree" width="40%" height="40%">
 </br>
 
 
-### 5.4. MLP Regressor
+### 6.4. MLP Regressor
 
 
 <img src="https://user-images.githubusercontent.com/120240261/236746767-1a2848dc-7a7b-4110-a9ab-3d44c38b9da7.png" alt="MLP regressor" width="40%" height="40%">
 </br>
 
 
-### 5.5. Statsmodels
+### 6.5. Statsmodels
 
 
 ```
@@ -218,7 +226,7 @@ model2.summary()
 </br>
 
 
-## 6. Conclusion
+## 7. Conclusion
 
 - Results of v1
 
